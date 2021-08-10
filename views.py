@@ -21,6 +21,7 @@ def personality(request):
     data['trait'] = trait
     user = api.get_user(username)
     data['username'] = username
+
     data['name'] = user.name
     data['profile_image'] = user.profile_image_url_https.replace("_normal", "")
     data['location'] = user.location
